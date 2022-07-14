@@ -1,0 +1,124 @@
+﻿{
+  "ua": "Mozilla/5.0 (Linux; Android 11; Mi 10 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.152 Mobile Safari/537.36",
+  "videoName":"个人阿里盘",
+  "homeUrl": "https://api.aliyundrive.com/adrive/v3/file/list?jsonBody={\"drive_id\":\"@get:{drive_id}\",\"image_url_process\":\"image/resize,w_1920/format,jpeg\",\"parent_file_id\":\"@get:{parent_file_id}\",\"limit\":200,\"order_by\":\"name\",\"order_direction\":\"ASC\",\"video_thumbnail_process\":\"video/snapshot,t_1000,f_jpg,ar_auto,w_300\",\"image_thumbnail_process\":\"image/resize,w_160/format,jpeg\"};post;utf-8;{authorization@@get:{access_token}}",
+  "cateNode": "",
+  "cateName": "",
+  "cateId": "",
+  "cateIdR": "",
+  "cateManual": {"大陆剧":"204892030#6229c307a1d31a7b251740999547f0e995986502","猪猪侠":"204892030#61a3c6b8a01da1b577134bb590a425774740fe24"},
+  "homeVodNode": "$.items",
+  "homeVodName": "$.name",
+  "homeVodId": "@Json:$.drive_id&&$.file_id##\\n###",
+  "homeVodIdR": "",
+  "homeVodImg": "https://api.aliyundrive.com/adrive/v3/file/list?jsonBody={\"drive_id\":\"@get:{drive_id}\",\"image_url_process\":\"image/resize,w_1920/format,jpeg\",\"parent_file_id\":\"{{$.file_id}}\",\"limit\":200,\"order_by\":\"name\",\"order_direction\":\"ASC\",\"video_thumbnail_process\":\"video/snapshot,t_1000,f_jpg,ar_auto,w_300\",\"image_thumbnail_process\":\"image/resize,w_160/format,jpeg\"};post;utf-8;{authorization@@get:{access_token}}<js></js>@Fun:base64encode##(.*)##proxy://do=legado&selector=JC5pdGVtc1sqXS50aHVtYm5haWwjIyguKj8pCi4qIyMkMTtnZXQ7dXRmLTg7e3JlZmVyZXJAaHR0cHM6Ly93d3cuYWxpeXVuZHJpdmUuY29tL30jIyN9&pic=$1###",
+  "homeVodImgR": "",
+  "homeVodMark": "$.name",
+  "cateUrl": "https://api.aliyundrive.com/adrive/v3/file/list?jsonBody={\"next_marker\":\"@get:{next_marker}\",\"drive_id\":\"@get:{drive_id}\",\"image_url_process\":\"image/resize,w_1920/format,jpeg\",\"parent_file_id\":\"@get:{parent_file_id}\",\"limit\":200,\"order_by\":\"name\",\"order_direction\":\"ASC\",\"video_thumbnail_process\":\"video/snapshot,t_1000,f_jpg,ar_auto,w_300\",\"image_thumbnail_process\":\"image/resize,w_160/format,jpeg\"};post;utf-8;{authorization@@get:{access_token}}",
+  "cateVodNode": "$.items@put:{'next_marker':$.next_marker}",
+  "cateVodName": "$.name",
+  "cateVodId": "@Json:$.drive_id&&$.file_id##\\n###",
+  "cateVodIdR": "",
+  "cateVodImg": "https://api.aliyundrive.com/adrive/v3/file/list?jsonBody={\"drive_id\":\"@get:{drive_id}\",\"image_url_process\":\"image/resize,w_1920/format,jpeg\",\"parent_file_id\":\"{{$.file_id}}\",\"limit\":200,\"order_by\":\"name\",\"order_direction\":\"ASC\",\"video_thumbnail_process\":\"video/snapshot,t_1000,f_jpg,ar_auto,w_300\",\"image_thumbnail_process\":\"image/resize,w_160/format,jpeg\"};post;utf-8;{authorization@@get:{access_token}}<js></js>@Fun:base64encode##(.*)##proxy://do=legado&selector=JC5pdGVtc1sqXS50aHVtYm5haWwjIyguKj8pCi4qIyMkMTtnZXQ7dXRmLTg7e3JlZmVyZXJAaHR0cHM6Ly93d3cuYWxpeXVuZHJpdmUuY29tL30jIyN9&pic=$1###",
+  "cateVodImgR": "",
+  "cateVodMark": "$.name",
+  "dtUrl": "https://api.aliyundrive.com/adrive/v3/file/list?jsonBody={\"drive_id\":\"@get:{drive_id}\",\"image_url_process\":\"image/resize,w_1920/format,jpeg\",\"parent_file_id\":\"@get:{parent_file_id}\",\"limit\":200,\"order_by\":\"name\",\"order_direction\":\"ASC\",\"video_thumbnail_process\":\"video/snapshot,t_1000,f_jpg,ar_auto,w_300\",\"image_thumbnail_process\":\"image/resize,w_160/format,jpeg\"};post;utf-8;{authorization@@get:{access_token}}",
+  "dtNode": "//body",
+  "dtName": "$.items[*].name",
+  "dtNameR": "",
+  "dtImg": "{$.thumbnail};get;utf-8;{referer@https://www.aliyundrive.com/}<js></js>@Fun:base64encode##(.*)##proxy://do=legado&pic=$1###",
+  "dtImgR": "",
+  "defaultFrom":"FHD,HD,SD,LD",
+  "dtUrlNode": "$.items",
+  "dtUrlSubNode": "",
+  "dtUrlId": "{\"parent_name\":\";@get:{title}\",\"folder_id\":\"{{$.parent_file_id}}\",\"file_id\":\"{{$.file_id}}\",\"file_name\":\"{{$.name}}\",\"drive_id\":\"@get:{drive_id}\",\"share_pwd\":\"\",\"expiration\":\"\"}<js></js>@Fun:urlEncode&&base64Encode",
+  "dtUrlIdR": "",
+  "dtUrlName": "@Json:$.name@put:{vid:'$.drive_id&&$.file_id##\\\\n###'}",
+  "dtUrlNameR": "",
+  "itemUrlNode": "$.items",
+  "itemUrlId": "{\"parent_name\":\";@get:{parent_name};@get:{folder_name}\",\"folder_id\":\"@get:{parent_file_id}\",\"file_id\":\"@get:{file_id}\",\"file_name\":\"@get:{file_name}\",\"drive_id\":\"@get:{drive_id}\",\"share_pwd\":\"\",\"expiration\":\"\"}<js></js>@Fun:urlEncode&&base64Encode",
+  "itemUrlName": "$.name@put:{file_id:'$.file_id',file_name:'$.name',parent_name:'$.name',parent_file_id:'$.file_id'}",
+  "leaf":"$.file_extension",
+  "node":"$.type",
+  "leafValue":"3g2,3gp,3gp2,3gpp,amv,asf,avi,divx,dpg,dvr-ms,evo,f4v,flv,ifo,k3g,m1v,m2t,m2ts,m2v,m4b,m4p,m4v,mkv,mov,mp2v,mp4,mpe,mpeg,mpg,mpv2,mts,mxf,nsr,nsv,ogm,ogv,qt,ram,rm,rmvb,rpm,skm,tp,tpr,trp,ts,vob,webm,wm,wmp,wmv,wtv",
+  "nodeUrl":"https://api.aliyundrive.com/adrive/v3/file/list?jsonBody={\"drive_id\":\"@get:{drive_id}\",\"image_url_process\":\"image/resize,w_1920/format,jpeg\",\"parent_file_id\":\"@get:{parent_file_id}\",\"limit\":200,\"order_by\":\"name\",\"order_direction\":\"ASC\",\"video_thumbnail_process\":\"video/snapshot,t_1000,f_jpg,ar_auto,w_300\",\"image_thumbnail_process\":\"image/resize,w_160/format,jpeg\"};post;utf-8;{authorization@@get:{access_token}}",
+  "playUrl": "http://116.85.31.19:3000/apis/my-yun-play/@get:{file_id}/@get:{drive_id}/@get:{access_token}/{{$.video_preview_play_info.live_transcoding_task_list[?(@.template_id=='@get:{info}')].template_id}}/index.m3u8",
+  "playUa": "",
+  "searchUrl": "https://api.aliyundrive.com/adrive/v3/file/search?jsonBody={\"query\":\"name match '@get:{wd}'\",\"drive_id\":\"@get:{drive_id}\",\"image_url_process\":\"image/resize,w_1920/format,jpeg\",\"parent_file_id\":\"@get:{parent_file_id}\",\"limit\":100,\"order_by\":\"updated_at DESC\",\"video_thumbnail_process\":\"video/snapshot,t_1000,f_jpg,ar_auto,w_300\",\"image_thumbnail_process\":\"image/resize,w_160/format,jpeg\"};post;utf-8;{authorization@@get:{access_token}}",
+  "scVodNode": "$.items",
+  "scVodName": "$.name",
+  "scVodId": "@Json:$.drive_id&&$.file_id##\\n###",
+  "scVodIdR": "",
+  "scVodImg": "https://api.aliyundrive.com/adrive/v3/file/list?jsonBody={\"drive_id\":\"@get:{drive_id}\",\"image_url_process\":\"image/resize,w_1920/format,jpeg\",\"parent_file_id\":\"{{$.file_id}}\",\"limit\":200,\"order_by\":\"name\",\"order_direction\":\"ASC\",\"video_thumbnail_process\":\"video/snapshot,t_1000,f_jpg,ar_auto,w_300\",\"image_thumbnail_process\":\"image/resize,w_160/format,jpeg\"};post;utf-8;{authorization@@get:{access_token}}<js></js>@Fun:base64encode##(.*)##proxy://do=legado&selector=JC5pdGVtc1sqXS50aHVtYm5haWwjIyguKj8pCi4qIyMkMTtnZXQ7dXRmLTg7e3JlZmVyZXJAaHR0cHM6Ly93d3cuYWxpeXVuZHJpdmUuY29tL30jIyN9&pic=$1###",
+  "scVodMark": "$.name",
+  "token":"",
+  "nodeValue":"folder",
+  "decodeFlag":"true",
+  "decodePlay":"http://116.85.31.19:3000/apis/my-yun-play/@get:{file_id}/@get:{drive_id}/@get:{access_token}/@get:{template_id}/index.m3u8",
+  "detailParamMaps":[
+    {
+      "paramUrl":"https://api.aliyundrive.com/token/refresh?refresh_token=@get:{refresh_token};post;utf-8;{json@false}",
+      "paramKey":"access_token",
+      "paramValue":"$.access_token"
+    },
+    {
+      "paramUrl":"",
+      "paramKey":"parent_file_id",
+      "paramValue":"@get:{vid}##.*?#(.*)##$1"
+    }
+  ],
+  "homeParamMaps":[
+    {
+      "paramUrl":"",
+      "paramKey":"parent_file_id",
+      "paramValue":"@constant:61ed8f9dd2b1fa686f7a4f0487caf028ef6385c1"
+    }
+  ],
+  "categoryParamMaps":[
+    {
+      "paramUrl":"https://api.aliyundrive.com/token/refresh?refresh_token=@get:{refresh_token};post;utf-8;{json@false}",
+      "paramKey":"access_token",
+      "paramValue":"$.access_token"
+    },
+    {
+      "paramUrl":"",
+      "paramKey":"drive_id",
+      "paramValue":"@get:{cateId}##(.*)#.*##$1"
+    },
+    {
+      "paramUrl":"",
+      "paramKey":"parent_file_id",
+      "paramValue":"@get:{cateId}##.*?#(.*)##$1"
+    },    
+    {
+      "paramUrl":"https://api.aliyundrive.com/v2/share_link/get_share_token?drive_id=@get:{drive_id}&share_pwd=;post;utf-8;{json@false}",
+      "paramKey":"share_token",
+      "paramValue":"$.share_token"
+    }
+  ],
+  "playerParamMaps":[
+    {
+      "paramUrl":"",
+      "paramKey":"file_id",
+      "paramValue":"@get:{playUrl}<js></js>@Fun:base64Decode&&urlDecode<js></js>@Json:$.file_id"
+    },
+    {
+      "paramUrl":"https://api.aliyundrive.com/v2/file/get_video_preview_play_info?jsonBody={\"drive_id\":\"@get:{drive_id}\",\"file_id\":\"@get:{file_id}\",\"template_id\":\"\",\"category\":\"live_transcoding\"};post;utf-8;{authorization@@get:{access_token}&&User-Agent@PC_UA}",
+      "paramKey":"template_id",
+      "paramValue":"$.video_preview_play_info.live_transcoding_task_list[?(@.template_id=='@get:{info}')].template_id"
+    }
+  ],
+
+  "preParamMaps":[
+    {
+      "paramUrl":"@constant:http://mao.guibiaoguo.tk/ali_token",
+      "paramKey":"refresh_token",
+      "paramValue":"$.refresh_token@put:{'drive_id':'$.default_drive_id'}"
+    },
+    {
+      "paramUrl":"https://api.aliyundrive.com/token/refresh?refresh_token=@get:{refresh_token};post;utf-8;{json@false}",
+      "paramKey":"access_token",
+      "paramValue":"$.access_token"
+    }
+  ]
+}
